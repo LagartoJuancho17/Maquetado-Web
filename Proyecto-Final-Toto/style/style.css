@@ -1,0 +1,329 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.navbar {
+    top: 0;
+    z-index: 1000; /* Asegura que la navbar esté siempre encima de otros elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(28, 28, 28, 0.8); /* Fondo semi-transparente */
+    border-bottom: 1px solid #fff; /* Línea blanca al final */
+    backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque para un look más sofisticado */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .logo span {
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .icons i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    height: 50em;
+}
+
+.main-content .watch {
+    max-width: 40%;
+    margin-left: 13vh;
+}
+
+.main-content .watch img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content .text {
+    max-width: 40%;
+    margin-right: 11vh;
+}
+
+.main-content .text h2 {
+    font-size: 14px;
+    color: #b19777;
+    margin-bottom: 10px;
+}
+
+.main-content .text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.main-content .text p {
+    font-size: 16px;
+    color: #b3b3b3;
+    margin: 20px 0;
+}
+
+.main-content .text .btn {
+    padding: 10px 20px;
+    border: 1px solid #b19777;
+    color: #b19777;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.social-icons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons .follow {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pagination span {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.pagination .active {
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.side-icons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-icons a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center; /* Centra la lista horizontalmente */
+    align-items: center; /* Centra la lista verticalmente */
+    padding: 7vh; /* Espacio alrededor del banner */
+    background-color: rgb(242, 236, 229); /* Fondo claro para el banner */
+}
+
+.banner-list {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Alinea los elementos de la lista en línea */
+    gap: 14vh; /* Espacio entre los elementos de la lista */
+    padding: 0; /* Elimina el padding de la lista */
+    margin: 0; /* Elimina el margen de la lista */
+}
+
+.banner-item {
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Centra el texto dentro de cada elemento */
+    color: #000; /* Color del texto */
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
+    width: 100%; /* Ocupa el ancho completo de la página */
+}
+
+.image-item {
+    flex: 1; /* Hace que los elementos se expandan para llenar el contenedor */
+    max-width: 25%; /* Cada imagen ocupa el 25% del ancho total */
+    box-sizing: border-box; /* Incluye el padding y el border en el cálculo del ancho */
+}
+
+.image-item img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Image Card */
+.image-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #fff; /* Borde blanco alrededor de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la tarjeta */
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+/* Menu */
+.menu {
+    position: absolute;
+    bottom: -100%; /* Comienza fuera de la vista, por debajo de la imagen */
+    left: 0;
+    width: 100%;
+    background: #fff; /* Fondo blanco para el menú desplegable */
+    color: #333; /* Color de texto oscuro para contraste */
+    text-align: center;
+    transform: translateY(100%); /* Posición inicial fuera de vista */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación de transformación y opacidad */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+}
+
+/* Menu Icons */
+.menu .icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu .icons i {
+    font-size: 20px;
+    color: #333; /* Color de los iconos */
+    margin: 0 5px;
+}
+
+/* Menu Button */
+.menu .button {
+    display: flex;
+    justify-content: center;
+}
+
+.menu .button a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.menu .button a:hover {
+    background: #c0392b;
+}
+
+/* Info */
+.info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+/* Hover Effects */
+.image-card:hover .menu {
+    transform: translateY(0); /* Mueve el menú a su posición visible */
+    opacity: 1; /* Hace el menú completamente visible */
+}
+
+
+.feature-products{
+    height: 13em;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
